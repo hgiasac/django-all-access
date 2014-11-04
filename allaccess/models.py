@@ -6,7 +6,7 @@ from django.utils.timezone import now
 
 from .clients import get_client
 from .compat import AUTH_USER_MODEL
-from .fields import EncryptedField
+from .fields import EncryptedField, BigForeignKey, BigUUIDField
 
 
 class ProviderManager(models.Manager):
@@ -57,10 +57,10 @@ class AccountAccessManager(models.Manager):
 @python_2_unicode_compatible
 class AccountAccess(models.Model):
     "Authorized remote OAuth provider."
-
+    id = BigUUIDField(primary_key=True)
     identifier = models.CharField(max_length=255)
     provider = models.ForeignKey(Provider)
-    user = models.ForeignKey(AUTH_USER_MODEL, null=True, blank=True)
+    user = BigForeignKey(AUTH_USER_MODEL, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True, default=now)
     modified = models.DateTimeField(auto_now=True, default=now)
     access_token = EncryptedField(blank=True, null=True, default=None)
