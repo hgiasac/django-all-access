@@ -4,6 +4,19 @@ Release History
 Release and change history for django-all-access
 
 
+v0.7.2 (2015-05-13)
+------------------------------------
+
+- Model updates for Django 1.8 compatibility. Requires a non-DB altering migration.
+
+
+v0.7.1 (2015-04-19)
+------------------------------------
+
+- Fixed issue in ``migrate_social_accounts`` where output was overly verbose.
+- Fixed issue in ``migrate_social_accounts`` with handling skipped providers.
+
+
 v0.7.0 (2014-09-07)
 ------------------------------------
 
