@@ -11,6 +11,8 @@ views with sane defaults along with hooks to override the default behavior.
 .. image:: https://travis-ci.org/mlavin/django-all-access.svg?branch=master
     :target: https://travis-ci.org/mlavin/django-all-access
 
+You can find a basic demo application running at http://django-all-access.mlavin.org/
+
 Features
 ------------------------------------
 
@@ -59,4 +61,3 @@ through Google Groups.
 
 If you think you've found a bug or are interested in contributing to this project
 check out `django-all-access on Github <https://github.com/mlavin/django-all-access>`_.
-
